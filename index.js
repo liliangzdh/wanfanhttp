@@ -8,4 +8,6 @@ app.get('/', function (req, res) {
     res.send('Hello World');
 });
 
-app.listen(3000);
+app.listen(3000,'0.0.0.0',()=>{
+    console.log('服务启动成功');
+});
