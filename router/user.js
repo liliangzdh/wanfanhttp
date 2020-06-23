@@ -4,9 +4,9 @@
 
 const router = require('express').Router();
 const arr = require('../json/detail.json');
-const send =  require('../util/responseUtils');
+const send = require('../util/responseUtils');
 // api/user
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
     res.send("edddd");
 });
 
@@ -40,15 +40,27 @@ router.get('/info', function (request, response) {
         status: result.status,
         onlineVerificationCode: result.onlineVerificationCode,
         updateDate: result.updateDate,
-        avatar:result.avatar,
+        avatar: result.avatar,
     };
     //调用渲染模板
     response.render('info', bean);
 
 });
 
+// 微信小程序 头部获取
 // 是否 含有 这个 code。
-router.get('/:id/code', function(req, res) {
+router.get('/tip', function (req, res) {
+    send(res, {
+        "logo": '/images/logo.png',
+        "title": '学新网二维码结果获取',
+        "content": "可以获取任何二维码结果，并显示",
+        "hostname ":req.hostname,
+        "dev": true,
+    },200);
+});
+
+// 是否 含有 这个 code。
+router.get('/:id/code', function (req, res) {
     let id = req.params.id;
     let result = null;
     for (let bean of arr) {
@@ -57,9 +69,8 @@ router.get('/:id/code', function(req, res) {
             break;
         }
     }
-    send(res,result,result==null?400:200);
+    send(res, result, result == null ? 400 : 200);
 });
-
 
 
 module.exports = router;
