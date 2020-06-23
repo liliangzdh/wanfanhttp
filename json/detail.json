@@ -1,18 +1,40 @@
 [
   {
+    "username": "海东博",
+
     "id": "QKV20152016072500148128",
     "keywordArr": [
       "建筑工程",
       "建筑工程质量",
       "质量管理"
     ],
-    "username": "海东博",
     "company": "南昌机械厂",
     "serialTitle": "工业C",
     "year": "2019",
     "periods": "099",
     "classificationNumber": "TU713.3",
     "numberPages": "200",
-    "page": "100"
+    "page": "100",
+
+
+
+    "sex":"男",
+    "IDCard":"3601211000001212212",
+    "nation":"汉族",
+    "birthday":"1991年07月08日",
+    "university":"南昌大学",
+    "arrangement":"本科",
+    "department":"电气工程与自动化学院",
+    "class":"自动化091班",
+    "major":"自动化",
+    "studentNumber":"200910403311212",
+    "form":"全日制",
+    "enrollmentTime":"2009年09月12日",
+    "schoolSystem":"4年",
+    "type":"普通高等教育",
+    "status":"毕业(毕业日期2013年07月20日)",
+    "onlineVerificationCode":"ALQPXTN7KFE8N69Q",
+    "updateDate":"2020年6月22日",
+    "avatar":"../images/avatar/ALQPXTN7KFE8N69Q.png"
   }
 ]
