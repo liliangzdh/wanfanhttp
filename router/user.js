@@ -54,9 +54,9 @@ router.get('/tip', function (req, res) {
         "logo": '/images/logo.png',
         "title": '学新网二维码结果获取',
         "content": "可以获取任何二维码结果，并显示",
-        "hostname ":req.hostname,
+        "hostname ": req.hostname,
         "dev": true,
-    },200);
+    }, 200);
 });
 
 // 是否 含有 这个 code。
@@ -70,6 +70,44 @@ router.get('/:id/code', function (req, res) {
         }
     }
     send(res, result, result == null ? 400 : 200);
+});
+
+// 返回 app 需要的
+router.get("/:id/infoForApp", function (req, res) {
+    let id = req.params.id;
+    let result = null;
+    for (let bean of arr) {
+        if (bean.onlineVerificationCode === id) {
+            result = bean;
+            break;
+        }
+    }
+
+    if (result == null) {
+        send(res, result, 400);
+        return
+    }
+
+
+    let list = [];
+
+    let bottom = [];
+
+    list.push({"name":'院校',value:result['university']});
+    list.push({"name":'层次',value:result['arrangement']});
+    list.push({"name":'院系',value:result['department']});
+    list.push({"name":'班级',value:result['class']});
+    list.push({"name":'专业',value:result['major']});
+    list.push({"name":'学号',value:result['studentNumber']});
+    list.push({"name":'形式',value:result['form']});
+    list.push({"name":'入学时间',value:result['enrollmentTime']});
+    list.push({"name":'学制',value:result['schoolSystem']});
+    list.push({"name":'类型',value:result['type']});
+    list.push({"name":'学籍状态',value:result['status']});
+
+    bottom.push({"name":'在线验证码',value:result['onlineVerificationCode']});
+    bottom.push({"name":'更新日期',value:result['updateDate']});
+    send(res, {...result,"top":list,"bottom":bottom}, 200);
 });
 
 
