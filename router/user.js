@@ -112,8 +112,8 @@ router.get("/:id/infoForApp", function (req, res) {
         list.push({"name":'体重',value:'132'});
         list.push({"name":'婚姻',value:'已婚'});
 
-        bottom.push({"name":'验证码',value:result['onlineVerificationCode']});
-        bottom.push({"name":'日期',value:result['updateDate']});
+        // bottom.push({"name":'验证码',value:result['onlineVerificationCode']});
+        // bottom.push({"name":'日期',value:result['updateDate']});
     }else{
         list.push({"name":'院校',value:result['university']});
         list.push({"name":'层次',value:result['arrangement']});
