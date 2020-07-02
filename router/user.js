@@ -104,21 +104,34 @@ router.get("/:id/infoForApp", function (req, res) {
 
     let bottom = [];
 
-    list.push({"name":'院校',value:result['university']});
-    list.push({"name":'层次',value:result['arrangement']});
-    list.push({"name":'院系',value:result['department']});
-    list.push({"name":'班级',value:result['class']});
-    list.push({"name":'专业',value:result['major']});
-    list.push({"name":'学号',value:result['studentNumber']});
-    list.push({"name":'形式',value:result['form']});
-    list.push({"name":'入学时间',value:result['enrollmentTime']});
-    list.push({"name":'学制',value:result['schoolSystem']});
-    list.push({"name":'类型',value:result['type']});
-    list.push({"name":'学籍状态',value:result['status']});
+    let dev = true;
 
-    bottom.push({"name":'在线验证码',value:result['onlineVerificationCode']});
-    bottom.push({"name":'更新日期',value:result['updateDate']});
-    send(res, {...result,"top":list,"bottom":bottom, "hostname ": req.hostname,}, 200);
+    if(dev){
+        list.push({"name":'身高',value:'170'});
+        list.push({"name":'层次',value:'本科'});
+        list.push({"name":'体重',value:'132'});
+        list.push({"name":'婚姻',value:'已婚'});
+
+        bottom.push({"name":'验证码',value:result['onlineVerificationCode']});
+        bottom.push({"name":'日期',value:result['updateDate']});
+    }else{
+        list.push({"name":'院校',value:result['university']});
+        list.push({"name":'层次',value:result['arrangement']});
+        list.push({"name":'院系',value:result['department']});
+        list.push({"name":'班级',value:result['class']});
+        list.push({"name":'专业',value:result['major']});
+        list.push({"name":'学号',value:result['studentNumber']});
+        list.push({"name":'形式',value:result['form']});
+        list.push({"name":'入学时间',value:result['enrollmentTime']});
+        list.push({"name":'学制',value:result['schoolSystem']});
+        list.push({"name":'类型',value:result['type']});
+        list.push({"name":'学籍状态',value:result['status']});
+
+        bottom.push({"name":'在线验证码',value:result['onlineVerificationCode']});
+        bottom.push({"name":'更新日期',value:result['updateDate']});
+    }
+
+    send(res, {...result,"top":list,"bottom":bottom, "hostname ": req.hostname,"dev":dev}, 200);
 });
 
 
