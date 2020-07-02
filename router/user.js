@@ -50,6 +50,9 @@ router.get('/info', function (request, response) {
 // 微信小程序 头部获取
 // 是否 含有 这个 code。
 router.get('/tip', function (req, res) {
+
+
+
     send(res, {
         "logo": '/images/logo.png',
         "title": '学新网二维码结果获取',
@@ -57,6 +60,14 @@ router.get('/tip', function (req, res) {
         "hostname ": req.hostname,
         "dev": true,
     }, 200);
+
+    // send(res, {
+    //     "logo": '/images/logo.png',
+    //     "title": '学信网二维码结果获取',
+    //     "content": "扫描验证高等教育学籍学历在线验证报告、学历认证报告以及相关教育背景报告真伪，请勿使用其他第三方程序扫描，以免上当受骗。",
+    //     "hostname ": req.hostname,
+    //     "dev": true,
+    // }, 200);
 });
 
 // 是否 含有 这个 code。
@@ -107,7 +118,7 @@ router.get("/:id/infoForApp", function (req, res) {
 
     bottom.push({"name":'在线验证码',value:result['onlineVerificationCode']});
     bottom.push({"name":'更新日期',value:result['updateDate']});
-    send(res, {...result,"top":list,"bottom":bottom}, 200);
+    send(res, {...result,"top":list,"bottom":bottom, "hostname ": req.hostname,}, 200);
 });
 
 
