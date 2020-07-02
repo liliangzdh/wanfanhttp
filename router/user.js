@@ -52,22 +52,25 @@ router.get('/info', function (request, response) {
 router.get('/tip', function (req, res) {
 
 
+    let dev = false;
 
-    send(res, {
-        "logo": '/images/logo.png',
-        "title": '学新网二维码结果获取',
-        "content": "可以获取任何二维码结果，并显示",
-        "hostname ": req.hostname,
-        "dev": true,
-    }, 200);
-
-    // send(res, {
-    //     "logo": '/images/logo.png',
-    //     "title": '学信网二维码结果获取',
-    //     "content": "扫描验证高等教育学籍学历在线验证报告、学历认证报告以及相关教育背景报告真伪，请勿使用其他第三方程序扫描，以免上当受骗。",
-    //     "hostname ": req.hostname,
-    //     "dev": true,
-    // }, 200);
+    if(dev){
+        send(res, {
+            "logo": '/images/logo.png',
+            "title": '学新网二维码结果获取',
+            "content": "可以获取任何二维码结果，并显示",
+            "hostname ": req.hostname,
+            "dev": true,
+        }, 200);
+    }else{
+        send(res, {
+            "logo": '/images/logo.png',
+            "title": '学信网二维码结果获取',
+            "content": "扫描验证高等教育学籍学历在线验证报告、学历认证报告以及相关教育背景报告真伪，请勿使用其他第三方程序扫描，以免上当受骗。",
+            "hostname ": req.hostname,
+            "dev": true,
+        }, 200);
+    }
 });
 
 // 是否 含有 这个 code。
@@ -104,7 +107,7 @@ router.get("/:id/infoForApp", function (req, res) {
 
     let bottom = [];
 
-    let dev = true;
+    let dev = false;
 
     if(dev){
         list.push({"name":'身高',value:'170'});
