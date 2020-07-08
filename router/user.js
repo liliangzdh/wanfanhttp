@@ -7,7 +7,15 @@ const arr = require('../json/detail.json');
 const send = require('../util/responseUtils');
 // api/user
 router.get('/', function (req, res) {
-    res.send("edddd");
+    let min = 0;
+    const letter = "ABCDEFGHIJKLMNOPQRSTUWXYZ123456789";
+    let max = letter.length;
+    let temp= '';
+    for (let i = 0; i < 16; i++) {
+        let rand = Math.floor(Math.random() * (max - min + 1)) + min;
+        temp += letter[rand];
+    }
+    res.send(temp);
 });
 
 // api/user/:id
@@ -85,6 +93,7 @@ router.get('/:id/code', function (req, res) {
     }
     send(res, result, result == null ? 400 : 200);
 });
+
 
 // 返回 app 需要的
 router.get("/:id/infoForApp", function (req, res) {
