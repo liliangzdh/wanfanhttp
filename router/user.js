@@ -9,7 +9,7 @@ const send = require('../util/responseUtils');
 router.get('/', function (req, res) {
     let min = 0;
     const letter = "ABCDEFGHIJKLMNOPQRSTUWXYZ123456789";
-    let max = letter.length;
+    let max = letter.length-1;
     let temp= '';
     for (let i = 0; i < 16; i++) {
         let rand = Math.floor(Math.random() * (max - min + 1)) + min;
