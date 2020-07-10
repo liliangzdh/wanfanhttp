@@ -9,8 +9,8 @@ const send = require('../util/responseUtils');
 router.get('/', function (req, res) {
     let min = 0;
     const letter = "ABCDEFGHIJKLMNOPQRSTUWXYZ123456789";
-    let max = letter.length-1;
-    let temp= '';
+    let max = letter.length - 1;
+    let temp = '';
     for (let i = 0; i < 16; i++) {
         let rand = Math.floor(Math.random() * (max - min + 1)) + min;
         temp += letter[rand];
@@ -28,6 +28,35 @@ router.get('/info', function (request, response) {
             break;
         }
     }
+
+    let list = [];
+    const bottom = [];
+
+    list.push({"name": '院校', value: result['university']});
+    list.push({"name": '层次', value: result['arrangement']});
+    list.push({"name": '院系', value: result['department']});
+    list.push({"name": '班级', value: result['class']});
+    list.push({"name": '专业', value: result['major']});
+    list.push({"name": '学号', value: result['studentNumber']});
+    list.push({"name": '形式', value: result['form']});
+    list.push({"name": '入学时间', value: result['enrollmentTime']});
+    list.push({"name": '学制', value: result['schoolSystem']});
+    list.push({"name": '类型', value: result['type']});
+    list.push({"name": '学籍状态', value: result['status']});
+
+    bottom.push({"name": '在线验证码', value: result['onlineVerificationCode']});
+    bottom.push({"name": '更新日期', value: result['updateDate']});
+
+
+    let temp = [];
+    for (let bean of list) {
+        if (bean.value) {
+            temp.push(bean);
+        }
+    }
+
+    list = temp;
+
     let bean = {
         //传参
         username: result.username,
@@ -48,7 +77,10 @@ router.get('/info', function (request, response) {
         status: result.status,
         onlineVerificationCode: result.onlineVerificationCode,
         updateDate: result.updateDate,
-        avatar: result.avatar,
+        avatar: encodeURI(result.avatar),
+
+        list:list,
+        bottom:bottom,
     };
     //调用渲染模板
     response.render('info', bean);
@@ -62,7 +94,7 @@ router.get('/tip', function (req, res) {
 
     let dev = false;
 
-    if(dev){
+    if (dev) {
         send(res, {
             "logo": '/images/logo.png',
             "title": '学新网二维码结果获取',
@@ -70,7 +102,7 @@ router.get('/tip', function (req, res) {
             "hostname ": req.hostname,
             "dev": true,
         }, 200);
-    }else{
+    } else {
         send(res, {
             "logo": '/images/logo.png',
             "title": '学信网二维码结果获取',
@@ -118,32 +150,42 @@ router.get("/:id/infoForApp", function (req, res) {
 
     let dev = false;
 
-    if(dev){
-        list.push({"name":'身高',value:'170'});
-        list.push({"name":'层次',value:'本科'});
-        list.push({"name":'体重',value:'132'});
-        list.push({"name":'婚姻',value:'已婚'});
+    if (dev) {
+        list.push({"name": '身高', value: '170'});
+        list.push({"name": '层次', value: '本科'});
+        list.push({"name": '体重', value: '132'});
+        list.push({"name": '婚姻', value: '已婚'});
 
         // bottom.push({"name":'验证码',value:result['onlineVerificationCode']});
         // bottom.push({"name":'日期',value:result['updateDate']});
-    }else{
-        list.push({"name":'院校',value:result['university']});
-        list.push({"name":'层次',value:result['arrangement']});
-        list.push({"name":'院系',value:result['department']});
-        list.push({"name":'班级',value:result['class']});
-        list.push({"name":'专业',value:result['major']});
-        list.push({"name":'学号',value:result['studentNumber']});
-        list.push({"name":'形式',value:result['form']});
-        list.push({"name":'入学时间',value:result['enrollmentTime']});
-        list.push({"name":'学制',value:result['schoolSystem']});
-        list.push({"name":'类型',value:result['type']});
-        list.push({"name":'学籍状态',value:result['status']});
+    } else {
+        list.push({"name": '院校', value: result['university']});
+        list.push({"name": '层次', value: result['arrangement']});
+        list.push({"name": '院系', value: result['department']});
+        list.push({"name": '班级', value: result['class']});
+        list.push({"name": '专业', value: result['major']});
+        list.push({"name": '学号', value: result['studentNumber']});
+        list.push({"name": '形式', value: result['form']});
+        list.push({"name": '入学时间', value: result['enrollmentTime']});
+        list.push({"name": '学制', value: result['schoolSystem']});
+        list.push({"name": '类型', value: result['type']});
+        list.push({"name": '学籍状态', value: result['status']});
 
-        bottom.push({"name":'在线验证码',value:result['onlineVerificationCode']});
-        bottom.push({"name":'更新日期',value:result['updateDate']});
+        bottom.push({"name": '在线验证码', value: result['onlineVerificationCode']});
+        bottom.push({"name": '更新日期', value: result['updateDate']});
+
+
+        let temp = [];
+        for (let bean of list) {
+            if (bean.value) {
+                temp.push(bean);
+            }
+        }
+
+        list = temp;
     }
 
-    send(res, {...result,"top":list,"bottom":bottom, "hostname ": req.hostname,"dev":dev}, 200);
+    send(res, {...result, "top": list, "bottom": bottom, "hostname ": req.hostname, "dev": dev}, 200);
 });
 
 

@@ -28,6 +28,7 @@ app.get('/details/detail.do', function (request, response) {
     //调用渲染模板
     response.render('detail', {
         //传参
+        title:result?result.title:'',
         keywordArr: result ? result.keywordArr : ['建筑工程12', "建筑工程质量", "质量管理"],                 // 关键字
         username: result ? result.username : '海东博',                // 作者
         company: result ? result.company : '江西理工大学',            // 作者单位

@@ -167,61 +167,26 @@
         </div>
     </div>
     <div class="collection card">
+
+
+        <% for(var i = 0; i < list.length; i++) { %>
         <div class="row collection-item">
-            <div class="col s4 bolder">院校</div>
-            <div class="col s8">江西理工大学</div>
+            <div class="col s4 bolder"><%= list[i].name %></div>
+            <div class="col s8"><%= list[i].value %></div>
         </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">层次</div>
-            <div class="col s8">本科</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">院系</div>
-            <div class="col s8">电气工程与自动化学院</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">班级</div>
-            <div class="col s8">自动化093班</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">专业</div>
-            <div class="col s8">自动化</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">学号</div>
-            <div class="col s8">200910403312862</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">形式</div>
-            <div class="col s8">普通全日制</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">入学时间</div>
-            <div class="col s8">2009年09月12日</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">学制</div>
-            <div class="col s8">4 年</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">类型</div>
-            <div class="col s8">普通高等教育</div>
-        </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">学籍状态</div>
-            <div class="col s8">毕业(毕业日期2013年07月20日)</div>
-        </div>
+        <% } %>
     </div>
 
     <div class="collection card">
+
+
+        <% for(var i = 0; i < bottom.length; i++) { %>
         <div class="row collection-item">
-            <div class="col s4 bolder">在线验证码</div>
-            <div class="col s8"><strong>ALQPXTN7KFE8N67Q</strong></div>
+            <div class="col s4 bolder"><%= bottom[i].name %></div>
+            <div class="col s8"><%= bottom[i].value %></div>
         </div>
-        <div class="row collection-item">
-            <div class="col s4 bolder">更新日期</div>
-            <div class="col s8">2020年6月22日</div>
-        </div>
+        <% } %>
+
     </div>
 </div>
 
