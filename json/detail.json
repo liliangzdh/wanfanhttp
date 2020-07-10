@@ -1,7 +1,7 @@
 [
   {
     "username": "海东博",
-
+    "title" :"建筑工程质量管理工作",
     "id": "QKV20152016072500148128",
     "keywordArr": [
       "建筑工程",
@@ -36,5 +36,41 @@
     "onlineVerificationCode":"ALQPXTN7KFE8N69Q",
     "updateDate":"2020年6月22日",
     "avatar":"/images/avatar/ALQPXTN7KFE8N69Q.png"
+  },
+
+   {
+    "username": "廖芹菁",
+
+    "id": "780984196263",
+    "title" :"概念设计在建筑结构设计中的应用",
+    "keywordArr": [
+      "建筑工程",
+      "建筑工程质量",
+      "质量管理"
+    ],
+    "company": "江西卓成建设工程有限公司",
+    "serialTitle": "建筑",
+    "year": "2014",
+    "periods": "09",
+    "classificationNumber": "TU356.3",
+    "numberPages": "211",
+    "page": "29",
+
+    
+    "sex":"女",
+    "IDCard":"'362428199202010024",
+    "nation":"汉族",
+    "birthday":"1992年02月01日",
+    "university":"西南大学",
+    "arrangement":"专科",
+    "major":"建筑工程技术",
+    "form":"全日制",
+    "enrollmentTime":"2012年07月10日",
+    "schoolSystem":"3年",
+    "type":"普通高等教育",
+    "status":"毕业(毕业日期2012年07月10日)",
+    "onlineVerificationCode":"780984196263",
+    "updateDate":"2020年7月21日",
+    "avatar":"/images/avatar/廖芹菁.png"
   }
 ]
