@@ -57,6 +57,7 @@ router.get('/info', function (request, response) {
 
     list = temp;
 
+
     let bean = {
         //传参
         username: result.username,
@@ -78,10 +79,11 @@ router.get('/info', function (request, response) {
         onlineVerificationCode: result.onlineVerificationCode,
         updateDate: result.updateDate,
         avatar: encodeURI(result.avatar),
-
         list:list,
         bottom:bottom,
     };
+
+    console.log(87,encodeURI(result.avatar));
     //调用渲染模板
     response.render('info', bean);
 
