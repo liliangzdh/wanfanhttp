@@ -82,8 +82,6 @@ router.get('/info', function (request, response) {
         list:list,
         bottom:bottom,
     };
-
-    console.log(87,encodeURI(result.avatar));
     //调用渲染模板
     response.render('info', bean);
 
