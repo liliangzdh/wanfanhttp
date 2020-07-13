@@ -92,7 +92,7 @@ router.get('/info', function (request, response) {
 router.get('/tip', function (req, res) {
 
 
-    let dev = false;
+    let dev = true;
 
     if (dev) {
         send(res, {
@@ -148,7 +148,7 @@ router.get("/:id/infoForApp", function (req, res) {
 
     let bottom = [];
 
-    let dev = false;
+    let dev = true;
 
     if (dev) {
         list.push({"name": '身高', value: '170'});
