@@ -72,5 +72,41 @@
     "onlineVerificationCode":"780984196263",
     "updateDate":"2020年7月21日",
     "avatar":"/images/avatar/廖芹菁.jpg"
+  },
+
+  {
+    "username": "刘跃军",
+    "title" :"岩土工程测试与检测技术的主要内容及其应用",
+    "id": "831265214352",
+    "keywordArr": [
+      "岩土工程",
+      "测试与检测技术",
+      "主要内容应用"
+    ],
+    "company": "江西鸿博建设工程有限公司，江西南昌，330000",
+    "serialTitle": "江西建材",
+    "year": "2014",
+    "periods": "（6）",
+    "classificationNumber": "U41TU4",
+    "numberPages": "1",
+    "page": "221-221",
+
+
+
+    "sex":"男",
+    "IDCard":"362422197710294310",
+    "nation":"汉族",
+    "birthday":"1977年10月29日",
+    "university":"江西交通职业技术学院",
+    "arrangement":"本科",
+    "major":"岩土工程",
+    "form":"函授",
+    "enrollmentTime":"2003年03月05日",
+    "schoolSystem":"2.5年",
+    "type":"成人高等教育",
+    "status":"毕业(毕业日期2015年06月30日)",
+    "onlineVerificationCode":"831265214352",
+    "updateDate":"2020年7月11日",
+    "avatar":"/images/avatar/刘跃军.jpg"
   }
 ]
