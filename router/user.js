@@ -6,7 +6,7 @@ const router = require('express').Router();
 const arr = require('../json/detail.json');
 const send = require('../util/responseUtils');
 
-const dev = false;
+const dev = true;
 // api/user
 router.get('/', function (req, res) {
     let min = 0;
@@ -102,6 +102,7 @@ router.get('/tip', function (req, res) {
             "title": '学新网二维码结果获取',
             "content": "可以获取任何二维码结果，并显示",
             "hostname ": req.hostname,
+            "dev":dev,
         }, 200);
     } else {
         send(res, {
@@ -109,6 +110,7 @@ router.get('/tip', function (req, res) {
             "title": '学信网二维码结果获取',
             "content": "扫描验证高等教育学籍学历在线验证报告、学历认证报告以及相关教育背景报告真伪，请勿使用其他第三方程序扫描，以免上当受骗。",
             "hostname ": req.hostname,
+            "dev":dev,
         }, 200);
     }
 });

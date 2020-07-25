@@ -8,6 +8,7 @@
     <link href="../css/detail.css" rel="stylesheet" type="text/css">
     <link href="../css/bottom.css" rel="stylesheet" type="text/css">
     <link href="../css/comment.css" rel="stylesheet" type="text/css">
+    <link href="../css/app.4c9ced35.css" rel="stylesheet" type="text/css">
 
     <style>
         .top {
@@ -934,8 +935,10 @@
 
                 <!--副标题-->
 
+
                 <div class="Mbtn">
                     <!-- 判断有全文 -->
+                    <!--<a title="下载" class="read detail_icon_export"><i class="downloadIcon icon"></i><span>下载</span></a>-->
                     <!-- 导出 -->
                     <a class="read detail_icon_export"><i class="icon icon_export"></i>导出</a>
                     <!-- 导出结束 -->
@@ -945,6 +948,7 @@
                                                                      class="icon icon_share"></i>分享</a>
                     <!-- 更多来源 -->
                 </div>
+
 
                 <!--分享弹框-->
                 <div id="sharez00" style="position: absolute;z-index: 200;left: 411px;top: 299px;display: none;">
@@ -983,8 +987,27 @@
                 <div class="abstract">
                 </div>
 
+                <% if (abstract) { %>
+                <div>
+                    <div class="summary" style=" font-size: 14px;margin-bottom: 13px; line-height: 30px;color: #666;clear: both">
+                        <span style=" font-weight: 700;font-style: normal;color: #898989">摘要：</span>
+                        <%=abstract%>...
+                        <span  style=" color: #417dc9;cursor: pointer;display: inline-block;font-weight: 400;margin-left: 10px">查看全部&gt;&gt;</span>
+                    </div>
+                </div>
+                <% } %>
                 <!--成果详情信息-->
                 <ul class="info">
+
+                    <% if (doi) { %>
+                    <li>
+                        <div class="info_left">doi：</div>
+                        <div class="info_right info_right_newline">
+                            <a class="college"><%=doi%></a></div>
+                    </li>
+                    <% } %>
+
+
                     <li>
                         <div class="info_left ">关键词：</div>
                         <div class="info_right info_right_newline">
@@ -994,7 +1017,7 @@
                             <!--<a title="知识脉络分析" href="javascript:void(0)">质量管理<i class="icon icon_key_word"></i></a>-->
 
                             <% for(var i = 0; i < keywordArr.length; i++) { %>
-                            <a title="知识脉络分析" ><%= keywordArr[i] %><i class="icon icon_key_word"></i></a>
+                            <a title="知识脉络分析"><%= keywordArr[i] %><i class="icon icon_key_word"></i></a>
                             <% } %>
                         </div>
                     </li>    <!-- 遍历作者  2018-11-28修改期刊作者获取方式-->
@@ -1006,9 +1029,11 @@
                         </div>
                     </li>
                     <li>
+
                         <div class="info_left">作者单位：</div>
-                        <div class="info_right info_right_newline">
-                            <div title="知识脉络分析" class="author"><%=company%></div>
+                        <div class="info_right">
+                            <a id="card0" class="info_right_name"><%=company%><i
+                                    class="icon icon_key_word"></i></a>
                         </div>
                     </li>
 
@@ -1189,7 +1214,7 @@
             </div>
             <div style="margin: 0px auto;" class="frame-comment-list" data-snsurl="http://www.wanfangdata.com.cn/sns">
                 <!--<iframe src="./commentList.html" width="100%" frameborder="0" scrolling="no"-->
-                        <!--id="frame-comment-list" style="height: 285px;"></iframe>-->
+                <!--id="frame-comment-list" style="height: 285px;"></iframe>-->
 
                 <div id="MathJax_Message" style="display: none;"></div>
                 <div class="comment-article">
@@ -1202,11 +1227,12 @@
                     </div>
                     <div class="comment-content">
                         <div class="send-text">
-                            <textarea class="write-article-input" id="marked-mathjax-input" autocomplete="off"></textarea>
+                            <textarea class="write-article-input" id="marked-mathjax-input"
+                                      autocomplete="off"></textarea>
                             <div class="write-article-input-tip">评论成功</div>
                         </div>
                         <div class="text-submit">
-                            <button class="write-article-submit" >评论</button>
+                            <button class="write-article-submit">评论</button>
                         </div>
                     </div>
                 </div>

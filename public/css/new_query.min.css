@@ -51,7 +51,7 @@ a:hover {
 }
 
 .clearfix {
-    zoom: 1
+    zoom: 1;
 }
 
 .clearfloat {
@@ -382,7 +382,8 @@ input {
 .res .img-div .img-right {
     float: left;
     width: 77%;
-    line-height: .533rem
+    line-height: .533rem;
+    margin-top:18px;
 }
 
 .res .img-div .img-right h6 {
