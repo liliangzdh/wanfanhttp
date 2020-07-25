@@ -34,17 +34,18 @@ router.get('/info', function (request, response) {
     let list = [];
     const bottom = [];
 
-    list.push({"name": '院校', value: result['university']});
-    list.push({"name": '层次', value: result['arrangement']});
-    list.push({"name": '院系', value: result['department']});
-    list.push({"name": '班级', value: result['class']});
-    list.push({"name": '专业', value: result['major']});
-    list.push({"name": '学号', value: result['studentNumber']});
-    list.push({"name": '形式', value: result['form']});
     list.push({"name": '入学时间', value: result['enrollmentTime']});
+    list.push({"name": '毕业时间', value: result['graduationTime']});
+    list.push({"name": '学校名称', value: result['university']});
+    list.push({"name": '专业', value: result['major']});
+    list.push({"name": '学历类别', value: result['type']});
     list.push({"name": '学制', value: result['schoolSystem']});
-    list.push({"name": '类型', value: result['type']});
-    list.push({"name": '学籍状态', value: result['status']});
+    list.push({"name": '学习形式', value: result['form']});
+
+    list.push({"name": '层次', value: result['arrangement']});
+    list.push({"name": '证书编号', value: result['certificateNumber']});
+    list.push({"name": '毕(结)业', value: result['status']});
+    list.push({"name": '校(院)长姓名', value: result['nameOfPrincipal']});
 
     bottom.push({"name": '在线验证码', value: result['onlineVerificationCode']});
     bottom.push({"name": '更新日期', value: result['updateDate']});
@@ -157,17 +158,19 @@ router.get("/:id/infoForApp", function (req, res) {
         // bottom.push({"name":'验证码',value:result['onlineVerificationCode']});
         // bottom.push({"name":'日期',value:result['updateDate']});
     } else {
-        list.push({"name": '院校', value: result['university']});
-        list.push({"name": '层次', value: result['arrangement']});
-        list.push({"name": '院系', value: result['department']});
-        list.push({"name": '班级', value: result['class']});
-        list.push({"name": '专业', value: result['major']});
-        list.push({"name": '学号', value: result['studentNumber']});
-        list.push({"name": '形式', value: result['form']});
         list.push({"name": '入学时间', value: result['enrollmentTime']});
+        list.push({"name": '毕业时间', value: result['graduationTime']});
+        list.push({"name": '学校名称', value: result['university']});
+        list.push({"name": '专业', value: result['major']});
+        list.push({"name": '学历类别', value: result['type']});
         list.push({"name": '学制', value: result['schoolSystem']});
-        list.push({"name": '类型', value: result['type']});
-        list.push({"name": '学籍状态', value: result['status']});
+        list.push({"name": '学习形式', value: result['form']});
+
+        list.push({"name": '层次', value: result['arrangement']});
+        list.push({"name": '证书编号', value: result['certificateNumber']});
+        list.push({"name": '毕(结)业', value: result['status']});
+        list.push({"name": '校(院)长姓名', value: result['nameOfPrincipal']});
+
 
         bottom.push({"name": '在线验证码', value: result['onlineVerificationCode']});
         bottom.push({"name": '更新日期', value: result['updateDate']});
