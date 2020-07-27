@@ -6,7 +6,7 @@ const router = require('express').Router();
 const arr = require('../json/detail.json');
 const send = require('../util/responseUtils');
 
-const dev = true;
+const dev = false;
 // api/user
 router.get('/', function (req, res) {
     let min = 0;
