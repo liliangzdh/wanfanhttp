@@ -1,46 +1,47 @@
 [
   {
-    "username": "海东博",
-    "title" :"建筑工程质量管理工作",
-    "id": "QKV20152016072500148128",
-    "abstract":"随着我国社会经济的快速发展，特别是基础建设的不断深入，建筑企业得到了很大的发展，我国的土地资源也越来越紧张。由于我国人口分布以及其它因素的影响，建筑工程施工过程中不可避免的遇到岩土工程相关问题。岩土工程施工是建筑工程的基础性工程，直接关系着建筑工程的质量，所以必须采取科学的测试与检测技术。本文就对岩土工程中的测试与检测技术内容及其应用进行分析，希望能给有关人",
-    "doi":"10.3969/j.issn.1006-2890.2014.06.201",
+    "username": "曹建辉",
+    "title" :"市政排水管网工程中基坑的施工开挖与支护技术",
+    "id": "ABELE7VYN25FVYUD",
+    "abstract":"随着经济的快速发展和和谐社会的构建，我国城市化建设步伐越来越快，市政排水管网工程的建设是城市建设的重要部分，只有保证市政排水管网工程的正常运行，才能为城市创建良好的发展环境。基坑施工是市政排水管网工程的基础，因此，对市政排水管网工程的基坑施工开挖和支护技术进行分析有十分重要的意义。",
+    "doi":"10.3969/j.issn.1006-2890.2014.17.083",
     "keywordArr": [
-      "建筑工程",
-      "建筑工程质量",
-      "质量管理"
+      "市政配水管网工程",
+      "基坑施工",
+      "开挖",
+      "支护技术"
     ],
-    "company": "南昌机械厂",
-    "serialTitle": "工业C",
-    "year": "2019",
-    "periods": "099",
-    "classificationNumber": "TU713.3",
-    "numberPages": "200",
-    "page": "100",
+    "company": "",
+    "serialTitle": "江西建材",
+    "year": "2014",
+    "periods": "17",
+    "classificationNumber": "TU9TQ3",
+    "numberPages": "1",
+    "page": "90-90",
 
 
 
     "sex":"男",
-    "birthday":"1991年07月08日",
+    "birthday":"1987年07月15日",
 
-    "enrollmentTime":"2009年09月12日",
-    "graduationTime":"2012年10月12日",
-    "university":"南昌大学",
-    "major":"自动化",
+    "enrollmentTime":"2006年09月01日",
+    "graduationTime":"2010年07月10日",
+    "university":"华东交通大学",
+    "major":"给排水工程",
     "type":"普通高等教育",
     "schoolSystem":"4年",
     "form":"普通全日制",
     "arrangement":"本科",
-    "certificateNumber":"1020 7800 1305 0013 21",
+    "certificateNumber":"1040 4120 1005 0041 71",
     "status":"毕业",
     "nameOfPrincipal":"",
 
-    "onlineVerificationCode":"ALQPXTN7KFE8N69Q",
+    "onlineVerificationCode":"ABELE7VYN25FVYUD",
     "updateDate":"2020年6月22日",
-    "avatar":"/images/avatar/ALQPXTN7KFE8N69Q.png"
+    "avatar":"/images/avatar/曹建辉.jpg"
   },
 
-   {
+  {
     "username": "廖芹菁",
 
     "id": "780984196263",
@@ -60,24 +61,24 @@
 
 
 
-     "sex":"女",
-     "birthday":"1992年02月01日",
+    "sex":"女",
+    "birthday":"1992年02月01日",
 
-     "enrollmentTime":"2012年07月10日",
-     "graduationTime":"2015年10月12日",
-     "university":"西南大学",
-     "major":"建筑工程技术",
-     "type":"普通高等教育",
-     "schoolSystem":"3年",
-     "form":"普通全日制",
-     "arrangement":"专科",
-     "certificateNumber":"1020 2344 3544 4566 31",
-     "status":"毕业",
-     "nameOfPrincipal":"",
+    "enrollmentTime":"2012年07月10日",
+    "graduationTime":"2015年10月12日",
+    "university":"西南大学",
+    "major":"建筑工程技术",
+    "type":"普通高等教育",
+    "schoolSystem":"3年",
+    "form":"普通全日制",
+    "arrangement":"专科",
+    "certificateNumber":"1020 2344 3544 4566 31",
+    "status":"毕业",
+    "nameOfPrincipal":"",
 
-     "onlineVerificationCode":"780984196263",
-     "updateDate":"2020年7月21日",
-     "avatar":"/images/avatar/廖芹菁.jpg"
+    "onlineVerificationCode":"780984196263",
+    "updateDate":"2020年7月21日",
+    "avatar":"/images/avatar/廖芹菁.jpg"
 
   },
 
